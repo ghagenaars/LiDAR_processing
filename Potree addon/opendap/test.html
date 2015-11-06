@@ -1,0 +1,42 @@
+<html>
+    <head>
+<script type="text/javascript">
+var exports=window;
+var IE_HACK=false;
+</script>
+        <script type="text/javascript" src="vbscript.js"></script>
+        <script type="text/javascript" src="xdr.js"></script>
+        <script type="text/javascript" src="parser.js"></script>
+        <script type="text/javascript" src="jsdap.js"></script>
+        
+        <script type="text/javascript">
+            
+        </script>
+    </head>
+    <body>
+          
+        <script type="text/javascript">
+            var App = {}; //append variables
+            App.var1 = 'bla';
+            
+            function receive_data(data){
+                App.data = data;
+                
+                console.log(data);
+                
+                //return data;
+            }
+            function load(url) {
+                loadData(url, receive_data);
+                return false;
+            } 
+            
+            load("http://127.0.0.1:8001/zandmotor_shader.nc.dods?time[0:10],x[0:10]");
+            
+            
+            //console.log(App);
+            
+        </script>
+    </body>
+</html>
+
